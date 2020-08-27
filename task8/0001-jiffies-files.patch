@@ -1,0 +1,33 @@
+From e02a499903323a066d4437e3430b5ed2ae6e40d8 Mon Sep 17 00:00:00 2001
+From: = <=>
+Date: Sat, 25 Jul 2020 23:37:39 +0530
+Subject: [PATCH] jiffies files
+
+---
+ hello_world.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/hello_world.c b/hello_world.c
+index 4e5aa5e..a686ec8 100644
+--- a/hello_world.c
++++ b/hello_world.c
+@@ -4,6 +4,7 @@
+ #include <linux/string.h>
+ #include <linux/fs.h>
+ #include <linux/debugfs.h>
++#include <linux/jiffies.h>
+ 
+ static char *id = "a21ee7cfaff1";
+ static struct dentry *dir;
+@@ -23,6 +24,8 @@ static int hello_init(void)
+ 
+ 	debugfs_create_file("id", 0666, dir, NULL, &debugfs_fileops);
+ 
++	debugfs_create_u32("jiffies", 0444, dir, (u32 *)&jiffies);
++
+ 	return 0;
+ }
+ 
+-- 
+2.20.1
+
