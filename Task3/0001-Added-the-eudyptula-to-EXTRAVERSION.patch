@@ -1,0 +1,25 @@
+From 1721e4185771490edf820ab86ced0d76bf7b78b6 Mon Sep 17 00:00:00 2001
+From: = <=>
+Date: Wed, 1 Jul 2020 16:18:10 +0530
+Subject: [PATCH] Added the eudyptula to EXTRAVERSION
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index ac2c61c37..5166081c6 100644
+--- a/Makefile
++++ b/Makefile
+@@ -2,7 +2,7 @@
+ VERSION = 5
+ PATCHLEVEL = 8
+ SUBLEVEL = 0
+-EXTRAVERSION = -rc2
++EXTRAVERSION = -rc2-eudyptula
+ NAME = Kleptomaniac Octopus
+ 
+ # *DOCUMENTATION*
+-- 
+2.20.1
+
